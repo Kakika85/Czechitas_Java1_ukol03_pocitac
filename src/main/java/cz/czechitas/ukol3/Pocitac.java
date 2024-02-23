@@ -6,13 +6,11 @@ public class Pocitac {
     private Procesor cpu;
     private Pamet ram;
     private Disk pevnyDisk;
-
     private boolean jeZapnuty;
 
     public Procesor getCpu() {
         return cpu;
     }
-
     public void setCpu(Procesor cpu) {
         this.cpu = cpu;
     }
@@ -20,7 +18,6 @@ public class Pocitac {
     public Pamet getRam() {
         return ram;
     }
-
     public void setRam(Pamet ram) {
         this.ram = ram;
     }
@@ -28,7 +25,6 @@ public class Pocitac {
     public Disk getPevnyDisk() {
         return pevnyDisk;
     }
-
     public void setPevnyDisk(Disk pevnyDisk) {
         this.pevnyDisk = pevnyDisk;
     }
@@ -42,9 +38,8 @@ public class Pocitac {
             System.err.println("Počítač nelze zapnout, jelikož je již zapnutý");
             return;
         }
-
         if (!jeZapnuty && (cpu == null || ram == null || pevnyDisk == null)) {
-            System.err.println("Počítač nelze zapnout,jelikož mu chybí hardwarová/é součástka/y");
+            System.err.println("Počítač nelze zapnout, jelikož mu chybí hardwarová/é součástka/y");
             return;
         }
         jeZapnuty = true;
@@ -58,6 +53,7 @@ public class Pocitac {
         jeZapnuty = false;
         System.out.println("Vypínám počítač");
     }
+
     @Override
     public String toString(){
         return String.format("Informace o počítači: Procesor: =%scpu, operační paměť: =%sram, Disk: =%s pevnyDisk",

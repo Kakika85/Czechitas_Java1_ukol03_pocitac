@@ -9,7 +9,7 @@ public class HlavniProgram {
         //TODO tady bude váš kód - vytvoření instance třídy Pocitac, zapnutí, vpynutí, výpis hodnot.
         Pocitac karolinyPocitac = new Pocitac();
         System.out.println(karolinyPocitac.toString());
-        //karolinyPocitac.zapniSe();  //Vypíše očekávanou chybu o nekompletnosti
+        karolinyPocitac.zapniSe();  //Vypíše očekávanou chybu o nekompletnosti
 
         Procesor karolinyProcesor = new Procesor();
         karolinyProcesor.setRychlost(2_200_000_000L);
@@ -28,6 +28,12 @@ public class HlavniProgram {
 
         System.out.println(karolinyPocitac.toString());
 
-        
+        karolinyPocitac.zapniSe();
+        karolinyPocitac.zapniSe();    // vypíše chybu jelikož nelze zapnout 2x
+        System.out.println(karolinyPocitac.toString());
+
+        karolinyPocitac.vypniSe();
+        karolinyPocitac.vypniSe();    // chybu nepíše jen se neprovede operace
+
     }
 }
