@@ -15,4 +15,8 @@ public class Pamet {
     public void setKapacitaRAM(long kapacitaRAM) {
         this.kapacitaRAM = kapacitaRAM;
     }
+    @Override
+    public String toString(){
+        return String.format("Informace o paměti RAM: kapacitaRAM=%/s byte", kapacitaRAM);
+    }
 }
