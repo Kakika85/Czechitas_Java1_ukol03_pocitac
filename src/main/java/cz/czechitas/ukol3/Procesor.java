@@ -22,7 +22,7 @@ public class Procesor {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("Informace o procesoru: vyrobce=%s, rychlost=%s Hz", vyrobce, rychlost);
     }
 }
