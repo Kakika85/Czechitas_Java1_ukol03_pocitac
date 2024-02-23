@@ -32,6 +32,10 @@ public class HlavniProgram {
         karolinyPocitac.zapniSe();    // vypíše chybu jelikož nelze zapnout 2x
         System.out.println(karolinyPocitac.toString());
 
+        karolinyPocitac.vytvorSouborOVelikosti(100);
+        karolinyPocitac.vytvorSouborOVelikosti(1000);
+        karolinyPocitac.vymazSouborOVelikosti(100);
+
         karolinyPocitac.vypniSe();
         karolinyPocitac.vypniSe();    // chybu nepíše jen se neprovede operace
 
