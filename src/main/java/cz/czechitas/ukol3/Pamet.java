@@ -4,10 +4,6 @@ public class Pamet {
 
     private long kapacitaRAM;
 
-    public Pamet() {
-        kapacitaRAM = 1*1024*1024*1024;
-    }
-
     public long getKapacitaRAM() {
         return kapacitaRAM;
     }
@@ -17,6 +13,6 @@ public class Pamet {
     }
     @Override
     public String toString(){
-        return String.format("Informace o paměti RAM: kapacitaRAM=%/s byte", kapacitaRAM);
+        return String.format("Informace o paměti RAM: kapacitaRAM=%s byte", kapacitaRAM);
     }
 }

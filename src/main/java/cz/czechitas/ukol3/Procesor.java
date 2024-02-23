@@ -5,11 +5,6 @@ public class Procesor {
     private String vyrobce;
     private long rychlost;
 
-    public Procesor(String výrobce, long rychlost) {
-        this.vyrobce = výrobce;
-        this.rychlost = rychlost;
-    }
-
     public String getVyrobce() {
         return vyrobce;
     }
@@ -28,6 +23,6 @@ public class Procesor {
 
     @Override
     public String toString(){
-        return String.format("Informace o procesoru: vyrobce=%/s, rychlost=%s Hz", vyrobce, rychlost);
+        return String.format("Informace o procesoru: vyrobce=%s, rychlost=%s Hz", vyrobce, rychlost);
     }
 }

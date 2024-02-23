@@ -58,4 +58,9 @@ public class Pocitac {
         jeZapnuty = false;
         System.out.println("Vypínám počítač");
     }
+    @Override
+    public String toString(){
+        return String.format("Informace o počítači: Procesor: =%scpu, operační paměť: =%sram, Disk: =%s pevnyDisk",
+            cpu, ram,pevnyDisk);
+    }
 }
