@@ -1,4 +1,4 @@
-package cz.czechitas.ukol3;
+package cz.czechitas.ukol3.model;
 
 public class Disc {
     private long capacity;
@@ -22,6 +22,6 @@ public class Disc {
 
     @Override
     public String toString() {
-        return String.format("Informace o disku: kapacita je kapacita=%s bytů a využité místo je vyuziteMisto=%s bytů", capacity, usedSize);
+        return String.format("kapacita %s bytů a využité místo %s bytů", capacity, usedSize);
     }
 }

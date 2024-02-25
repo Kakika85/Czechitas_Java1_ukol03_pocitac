@@ -1,4 +1,4 @@
-package cz.czechitas.ukol3;
+package cz.czechitas.ukol3.model;
 
 public class Procesor {
 
@@ -23,6 +23,6 @@ public class Procesor {
 
     @Override
     public String toString() {
-        return String.format("Informace o procesoru: vyrobce=%s, rychlost=%s Hz", brand, speed);
+        return String.format("výrobce %s, rychlost %s Hz", brand, speed);
     }
 }

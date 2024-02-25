@@ -1,4 +1,4 @@
-package cz.czechitas.ukol3;
+package cz.czechitas.ukol3.model;
 
 /**
  * Spouštěcí třída celého programu
@@ -6,7 +6,6 @@ package cz.czechitas.ukol3;
 public class HlavniProgram {
 
     public static void main(String... args) {
-        //TODO tady bude váš kód - vytvoření instance třídy Computer, zapnutí, vpynutí, výpis hodnot.
         Computer karolinyComputer = new Computer();
         System.out.println(karolinyComputer.toString());
         karolinyComputer.turnOn();  //Vypíše očekávanou chybu o nekompletnosti
@@ -16,7 +15,7 @@ public class HlavniProgram {
         karolinyProcesor.setBrand("Intel");
 
         Memory karolinyMemory = new Memory();
-        karolinyMemory.setCapacityRam(16);
+        karolinyMemory.setCapacityRam(16L*1024*1024*1024);
 
         Disc karolinyDisc = new Disc();
         karolinyDisc.setCapacity(126_641_762_304L);

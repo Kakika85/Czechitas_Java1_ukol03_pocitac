@@ -1,4 +1,4 @@
-package cz.czechitas.ukol3;
+package cz.czechitas.ukol3.model;
 
 public class Memory {
 
@@ -14,6 +14,6 @@ public class Memory {
 
     @Override
     public String toString() {
-        return String.format("Informace o paměti RAM: kapacitaRAM=%s byte", capacityRam);
+        return String.format("kapacitaRAM %s bytes", capacityRam);
     }
 }
