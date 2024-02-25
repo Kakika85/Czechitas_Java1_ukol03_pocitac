@@ -1,27 +1,27 @@
 package cz.czechitas.ukol3;
 
 public class Disc {
-    private long capacityOf;
-    private long useSite;
+    private long capacity;
+    private long usedSize;
 
-    public long getCapacityOf() {
-        return capacityOf;
+    public long getCapacity() {
+        return capacity;
     }
 
-    public void setCapacityOf(long capacityOf) {
-        this.capacityOf = capacityOf;
+    public void setCapacity(long capacity) {
+        this.capacity = capacity;
     }
 
-    public long getUseSite() {
-        return useSite;
+    public long getUsedSize() {
+        return usedSize;
     }
 
-    public void setUseSite(long useSite) {
-        this.useSite = useSite;
+    public void setUsedSize(long useSite) {
+        this.usedSize = useSite;
     }
 
     @Override
     public String toString() {
-        return String.format("Informace o disku: kapacita je kapacita=%s bytů a využité místo je vyuziteMisto=%s bytů", capacityOf, useSite);
+        return String.format("Informace o disku: kapacita je kapacita=%s bytů a využité místo je vyuziteMisto=%s bytů", capacity, usedSize);
     }
 }

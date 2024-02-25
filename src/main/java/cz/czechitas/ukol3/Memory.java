@@ -2,18 +2,18 @@ package cz.czechitas.ukol3;
 
 public class Memory {
 
-    private long capacityRAM;
+    private long capacityRam;
 
-    public long getCapacityRAM() {
-        return capacityRAM;
+    public long getCapacityRam() {
+        return capacityRam;
     }
 
-    public void setCapacityRAM(long capacityRAM) {
-        this.capacityRAM = capacityRAM;
+    public void setCapacityRam(long capacityRam) {
+        this.capacityRam = capacityRam;
     }
 
     @Override
     public String toString() {
-        return String.format("Informace o paměti RAM: kapacitaRAM=%s byte", capacityRAM);
+        return String.format("Informace o paměti RAM: kapacitaRAM=%s byte", capacityRam);
     }
 }

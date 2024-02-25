@@ -2,15 +2,15 @@ package cz.czechitas.ukol3;
 
 public class Procesor {
 
-    private String producer;
+    private String brand;
     private long speed;
 
-    public String getProducer() {
-        return producer;
+    public String getBrand() {
+        return brand;
     }
 
-    public void setProducer(String producer) {
-        this.producer = producer;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public long getSpeed() {
@@ -23,6 +23,6 @@ public class Procesor {
 
     @Override
     public String toString() {
-        return String.format("Informace o procesoru: vyrobce=%s, rychlost=%s Hz", producer, speed);
+        return String.format("Informace o procesoru: vyrobce=%s, rychlost=%s Hz", brand, speed);
     }
 }
