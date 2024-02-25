@@ -22,9 +22,9 @@ public class HlavniProgram {
         karolinyDisc.setCapacity(126_641_762_304L);
         karolinyDisc.setUsedSize(99_952_730_112L);
 
-        Disc2 karolinyDisc2 = new Disc2();
-        karolinyDisc2.setCapacity2(888_945_246_208L);
-        karolinyDisc2.setUsedSize2(90_851_504_128L);
+        Disc karolinyDisc2 = new Disc();
+        karolinyDisc2.setCapacity(888_945_246_208L);
+        karolinyDisc2.setUsedSize(90_851_504_128L);
 
         karolinyComputer.setCpu(karolinyProcesor);
         karolinyComputer.setRam(karolinyMemory);

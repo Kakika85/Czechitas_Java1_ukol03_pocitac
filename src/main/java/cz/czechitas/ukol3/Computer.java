@@ -6,7 +6,7 @@ public class Computer {
     private Procesor cpu;
     private Memory ram;
     private Disc hardDisc;
-    private Disc2 hardDisc2;
+    private Disc hardDisc2;
     private boolean isTurnedOn;
 
     public Procesor getCpu() {
@@ -33,11 +33,11 @@ public class Computer {
         this.hardDisc = hardDisc;
     }
 
-    public Disc2 getHardDisc2() {
+    public Disc getHardDisc2() {
         return hardDisc2;
     }
 
-    public void setHardDisc2(Disc2 hardDisc2) {
+    public void setHardDisc2(Disc hardDisc2) {
         this.hardDisc2 = hardDisc2;
     }
 
@@ -83,8 +83,8 @@ public class Computer {
 
         long usedSize = hardDisc.getUsedSize();
         long capacity = hardDisc.getCapacity();
-        long usedSize2 = hardDisc2.getUsedSize2();
-        long capacity2 = hardDisc2.getCapacity2();
+        long usedSize2 = hardDisc2.getUsedSize();
+        long capacity2 = hardDisc2.getCapacity();
 
         if (usedSize + bytes < capacity) {
             usedSize += bytes;
@@ -93,7 +93,7 @@ public class Computer {
             System.out.println("Využité místo je: " + usedSize + "bytů.");
         } else if (usedSize2 + bytes < capacity2) {
             usedSize2 += bytes;
-            hardDisc2.setUsedSize2(usedSize2);
+            hardDisc2.setUsedSize(usedSize2);
             System.out.println("Na disk2 se zapsalo " + bytes + "bytů. Na disku zbývá " + (capacity2 - usedSize2) + "bytů.");
             System.out.println("Využité místo je: " + usedSize2 + "bytů.");
         } else {
@@ -113,8 +113,8 @@ public class Computer {
 
         long usedSize = hardDisc.getUsedSize();
         long capacity = hardDisc.getCapacity();
-        long usedSize2 = hardDisc2.getUsedSize2();
-        long capacity2 = hardDisc2.getCapacity2();
+        long usedSize2 = hardDisc2.getUsedSize();
+        long capacity2 = hardDisc2.getCapacity();
 
         if (usedSize - bytes >= 0) {
             usedSize -= bytes;
@@ -123,7 +123,7 @@ public class Computer {
             System.out.println("Využité místo je: " + usedSize + "bytů");
         } else if (usedSize2 - bytes >= 0) {
             usedSize2 -= bytes;
-            hardDisc2.setUsedSize2(usedSize2);
+            hardDisc2.setUsedSize(usedSize2);
             System.out.println("Z disku2 se smazalo " + bytes + "bytů. Na disku zbývá " + (capacity2 - usedSize2) + "bytů.");
             System.out.println("Využité místo je: " + usedSize2 + "bytů.");
         } else {
