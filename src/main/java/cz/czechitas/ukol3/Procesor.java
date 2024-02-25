@@ -2,27 +2,27 @@ package cz.czechitas.ukol3;
 
 public class Procesor {
 
-    private String vyrobce;
-    private long rychlost;
+    private String producer;
+    private long speed;
 
-    public String getVyrobce() {
-        return vyrobce;
+    public String getProducer() {
+        return producer;
     }
 
-    public void setVyrobce(String vyrobce) {
-        this.vyrobce = vyrobce;
+    public void setProducer(String producer) {
+        this.producer = producer;
     }
 
-    public long getRychlost() {
-        return rychlost;
+    public long getSpeed() {
+        return speed;
     }
 
-    public void setRychlost(long rychlost) {
-        this.rychlost = rychlost;
+    public void setSpeed(long speed) {
+        this.speed = speed;
     }
 
     @Override
     public String toString() {
-        return String.format("Informace o procesoru: vyrobce=%s, rychlost=%s Hz", vyrobce, rychlost);
+        return String.format("Informace o procesoru: vyrobce=%s, rychlost=%s Hz", producer, speed);
     }
 }

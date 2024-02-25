@@ -6,38 +6,41 @@ package cz.czechitas.ukol3;
 public class HlavniProgram {
 
     public static void main(String... args) {
-        //TODO tady bude váš kód - vytvoření instance třídy Pocitac, zapnutí, vpynutí, výpis hodnot.
-        Pocitac karolinyPocitac = new Pocitac();
-        System.out.println(karolinyPocitac.toString());
-        karolinyPocitac.zapniSe();  //Vypíše očekávanou chybu o nekompletnosti
+        //TODO tady bude váš kód - vytvoření instance třídy Computer, zapnutí, vpynutí, výpis hodnot.
+        Computer karolinyComputer = new Computer();
+        System.out.println(karolinyComputer.toString());
+        karolinyComputer.turnOn();  //Vypíše očekávanou chybu o nekompletnosti
 
         Procesor karolinyProcesor = new Procesor();
-        karolinyProcesor.setRychlost(2_200_000_000L);
-        karolinyProcesor.setVyrobce("Intel");
+        karolinyProcesor.setSpeed(2_200_000_000L);
+        karolinyProcesor.setProducer("Intel");
 
-        Pamet karolinyPamet = new Pamet();
-        karolinyPamet.setKapacitaRAM(16);
+        Memory karolinyMemory = new Memory();
+        karolinyMemory.setCapacityRAM(16);
 
-        Disk karolinyDisk = new Disk();
-        karolinyDisk.setKapacita(126_641_762_304L);
-        karolinyDisk.setVyuziteMisto(99_952_730_112L);
+        Disc karolinyDisc = new Disc();
+        karolinyDisc.setCapacityOf(126_641_762_304L);
+        karolinyDisc.setUseSite(99_952_730_112L);
 
-        karolinyPocitac.setCpu(karolinyProcesor);
-        karolinyPocitac.setRam(karolinyPamet);
-        karolinyPocitac.setPevnyDisk(karolinyDisk);
+        Disc2 karolinyDisc2 = new Disc2();
+        karolinyDisc2.setCapacityOf2(0L);
+        karolinyDisc2.setUseSite2(0L);
 
-        System.out.println(karolinyPocitac.toString());
+        karolinyComputer.setCpu(karolinyProcesor);
+        karolinyComputer.setRam(karolinyMemory);
+        karolinyComputer.setHardDisc(karolinyDisc);
 
-        karolinyPocitac.zapniSe();
-        karolinyPocitac.zapniSe();    // vypíše chybu jelikož nelze zapnout 2x
-        System.out.println(karolinyPocitac.toString());
+        System.out.println(karolinyComputer.toString());
 
-        karolinyPocitac.vytvorSouborOVelikosti(100);
-        karolinyPocitac.vytvorSouborOVelikosti(1000);
-        karolinyPocitac.vymazSouborOVelikosti(100);
+        karolinyComputer.turnOn();
+        karolinyComputer.turnOn();    // vypíše chybu jelikož nelze zapnout 2x
+        System.out.println(karolinyComputer.toString());
 
-        karolinyPocitac.vypniSe();
-        karolinyPocitac.vypniSe();    // chybu nepíše jen se neprovede operace
+        karolinyComputer.createSetOfValues(100);
+        karolinyComputer.createSetOfValues(1000);
+        karolinyComputer.deleteSetOfValues(100);
 
+        karolinyComputer.turnOff();
+        karolinyComputer.turnOff();    // chybu nepíše jen se neprovede operace
     }
 }
