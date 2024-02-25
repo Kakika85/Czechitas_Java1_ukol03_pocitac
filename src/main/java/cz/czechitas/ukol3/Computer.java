@@ -76,27 +76,13 @@ public class Computer {
             System.err.println("PC není zapnutý!");
             return;
         }
-        if (bytes < 0) {
-            System.err.println("Soubor má zápornou velikost!!!");
-            return;
+        System.out.println("Zapisuji na disk 1");
+        boolean success = hardDisc.createFileOfSize(bytes);
+        if (!success) {
+            System.out.println("Zápis na disk 1 se nezdařil, přecházím na disk 2.");
+            success = hardDisc2.createFileOfSize(bytes);
         }
-
-        long usedSize = hardDisc.getUsedSize();
-        long capacity = hardDisc.getCapacity();
-        long usedSize2 = hardDisc2.getUsedSize();
-        long capacity2 = hardDisc2.getCapacity();
-
-        if (usedSize + bytes < capacity) {
-            usedSize += bytes;
-            hardDisc.setUsedSize(usedSize);
-            System.out.println("Na disk1 se zapsalo " + bytes + "bytů. Na disku zbývá " + (capacity - usedSize) + "bytů.");
-            System.out.println("Využité místo je: " + usedSize + "bytů.");
-        } else if (usedSize2 + bytes < capacity2) {
-            usedSize2 += bytes;
-            hardDisc2.setUsedSize(usedSize2);
-            System.out.println("Na disk2 se zapsalo " + bytes + "bytů. Na disku zbývá " + (capacity2 - usedSize2) + "bytů.");
-            System.out.println("Využité místo je: " + usedSize2 + "bytů.");
-        } else {
+        if (!success) {
             System.err.println("Na disku1 ani na disku2 není dostatek místa, uvolněte místo či si kupte třetí disk. :-)");
         }
     }
@@ -106,27 +92,12 @@ public class Computer {
             System.err.println("PC není zapnutý!");
             return;
         }
-        if (bytes < 0) {
-            System.err.println("Soubor má zápornou velikost!!!");
-            return;
+        boolean success = hardDisc.deleteFileOfSize(bytes);
+        if (!success) {
+            System.out.println("Výmaz z disku 1 se nezdařil, přecházím na disk 2.");
+            success = hardDisc2.deleteFileOfSize(bytes);
         }
-
-        long usedSize = hardDisc.getUsedSize();
-        long capacity = hardDisc.getCapacity();
-        long usedSize2 = hardDisc2.getUsedSize();
-        long capacity2 = hardDisc2.getCapacity();
-
-        if (usedSize - bytes >= 0) {
-            usedSize -= bytes;
-            hardDisc.setUsedSize(usedSize);
-            System.out.println("Z disku1 se smazalo " + bytes + "bytů. Na disku zbývá " + (capacity - usedSize) + "bytů.");
-            System.out.println("Využité místo je: " + usedSize + "bytů");
-        } else if (usedSize2 - bytes >= 0) {
-            usedSize2 -= bytes;
-            hardDisc2.setUsedSize(usedSize2);
-            System.out.println("Z disku2 se smazalo " + bytes + "bytů. Na disku zbývá " + (capacity2 - usedSize2) + "bytů.");
-            System.out.println("Využité místo je: " + usedSize2 + "bytů.");
-        } else {
+        if (!success) {
             System.err.println("Disk1 ani disk2 není dostatečně zaplněn.");
         }
     }
